@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Extracting Latent Moral Information from Text with ChatGPT</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/scipo.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<div class="withbg">
+					<h4>How Image-As-Data Approaches Can Help Analysing Protest and Its Organisation: Methods and Applications</h4>
+					<h3>Analysis of Protest Themes using <br>Large Multimodal Models</h3>
+					<h4 style ="color:#333">Justin Chun-ting Ho</h4>
+					<small>Amsterdam School of Communication Research</small>
+
+					<small>In collaboration with <b>Milan Ismangil (Utrecht University)</b></small>
+					<p><img src="uvalogo.png" width="32%" style="background:none; border:none; box-shadow:none;"><img src="https://www.uu.nl/themes/custom/corp/src/images/uu-logo-en.svg" width="25%" style="background:none; border:none; box-shadow:none;"></p>
+					<!-- <p><b>Slides: <a href="http://bit.ly/CAT4SMR_slides">http://bit.ly/CAT4SMR_slides</a></b></p> -->
+				</div>
+			</section>
+			<section data-background-size="70%" data-background="hkprotest1.jpg">
+				<div style="background-color:rgba(255,255,255,0.5);">
+					<h3>Visuals in Social Movement Studies</h3>
+					<ul>
+						<li>Visual materials play an important role in the mobilisation of social movements</li>
+						<li class="fragment" >Automated analysis of visual data is extremely challenging</li>
+						<li class="fragment" >Much of the work was done qualitatively</li>
+					</ul>
+				</div>
+			</section>
+			<section data-background-size="70%" data-background="https://victoriatbhui.wordpress.com/wp-content/uploads/2014/10/10339564_992616524098612_2385724599168094189_n.jpg">
+				<div style="background-color:rgba(255,255,255,0.7);">
+					<h3>Social Media and Hong Kong Social Movement</h3>
+					<ul>
+						<li>Social media play increasingly important roles</li>
+						<li class="fragment" >Connective action, networked social movement, leaderless movements</li>
+						<li class="fragment" >Visual materials are often neglected</li>
+					</ul>
+				</div>
+			</section>
+				<section>
+					<h2>Data</h2>
+				</section>
+			<section>
+				<div style="background-color:rgba(255,255,255,0.9);">
+					<h3>Data</h3>
+					<ul>
+						<li>Two largest movement publicity Telegram channels<br><small>@hkposter777 and @hkstandstrong_promo</small></li>
+						<li>115,635 images <br><small>(from channel creation date to 15 June 2024)</small></li>
+						<li>Photos, posters, memes, infographics, comics</li>
+					</ul>
+					<br> 
+				</div>
+			</section>
+			<section>
+				<div style="background-color:rgba(255,255,255,0.7);">
+					<h3>Coding Scheme</h3>
+					<ul>
+						<li>Developed coding scheme (19 categories) based on Ismangil and Schneider (2023)</li>
+						<li>Annotate a random sample of 200 images <br>(Two coders, Krippendorff's alpha 0.563)</li>
+					</ul>
+				</div>
+			</section>
+			<section>
+				<div style="background-color:rgba(255,255,255,0.7);">
+					<h3>Analysis</h3>
+					<ul>
+						<li>Tested CLIP, Llava 7B, Idefics 3, and GPT-4o</li>
+						<li>Created a stratified sample of 100 images per month (n=6069)</li>
+					</ul>
+				</div>
+			</section>
+			<section>
+				<h2>Model Selection</h2>
+			</section>
+			<section data-background-size="30%" data-background="acc.png">
+			</section>
+			<section data-background-size="70%" data-background="accbytopic.png">
+			</section>
+			<section>
+				<h4>Confusion Matrix (GPT-4o)</h4>
+				<img src="cm_gpt.png" width="50%" style="background:none; border:none; box-shadow:none;">
+			</section>
+			<section>
+				<h4>Confusion Matrix (Llava)</h4>
+				<img src="cm_llava.png" width="50%" style="background:none; border:none; box-shadow:none;">
+			</section>
+			<section>
+				<h2>Results</h2>
+			</section>
+			<section>
+				<h4>Frequencies</h4>
+				<img src="all_trends.png" width="70%" style="background:none; border:none; box-shadow:none;">
+			</section>
+			<section>
+				<section>
+					<h4>Theme Counts</h4>
+					<img src="topic_overall.png" width="50%" style="background:none; border:none; box-shadow:none;">
+				</section>
+				<section>
+					<h4>Crowd</h4>
+					<img src="crowd.png" width="50%" style="background:none; border:none; box-shadow:none;">
+				</section>
+				<section>
+					<h4>Cartoons</h4>
+					<img src="cartoons.png" width="50%" style="background:none; border:none; box-shadow:none;">
+				</section>
+				<section data-background-iframe="topic_viz_updated.html" data-background-interactive>
+				</section>
+			</section>
+			<section>
+				<h4>Theme Trends</h4>
+				<img src="topic_trends.png" width="90%" style="background:none; border:none; box-shadow:none;">
+			</section>
+			<section>
+				<div style="background-color:rgba(255,255,255,0.9);">
+					<h3>Discussion</h3>
+					<ul>
+						<li>Duel functionalities of Telegram (photos and artworks)</li>
+						<li>Social media's role during movement abeyance</li>
+					</ul>
+					<br> 
+				</div>
+			</section>
+				<section>
+					<h2>Thank You!</h2>
+					<h4>Twitter/X: @justin_ct_ho<br>Github: justinchuntingho<br>Email: j.c.ho@uva.nl</h4>
+				</section>
+				</div>
+			</div>
+
+			<script src="dist/reveal.js"></script>
+			<script src="plugin/notes/notes.js"></script>
+			<script src="plugin/markdown/markdown.js"></script>
+			<script src="plugin/highlight/highlight.js"></script>
+			<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+				Reveal.initialize({
+					hash: true,
+					slideNumber: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+					plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				});
+			</script>
+		</body>
+		</html>
